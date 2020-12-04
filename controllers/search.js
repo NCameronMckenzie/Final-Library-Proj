@@ -1,16 +1,16 @@
-//const db = require('../middleware/dbconnect');
+const db = require('../middleware/dbconnect');
 const mysql = require('mysql');
 
 const SELECT_ALL_BOOKS = 'SELECT * from books';
 
-// SERVER
-const db = mysql.createConnection({
+
+/*const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'NewPassword',
     database: 'library_information',
     port: '3306'
-});
+});*/
 
 db.connect(function(err){
     if(err) {
