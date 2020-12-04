@@ -1,0 +1,106 @@
+
+<style>
+
+    Rows {
+        display: inline-block;
+    }
+
+    container {
+        display: inline-block;
+        flex-direction: row;
+        justify-content: center;
+        height: 30vh;
+        width: 25vw;
+        margin-left: 2vh;
+    }
+
+    bookItem {
+        width: 100px;
+        height: 17px;
+        flex-direction: row;
+        display: flex;
+        align-self: center;
+    }
+
+    rect2 {
+        width: 126px;
+        height: 220px;
+        background-color: rgba(202,42,42,1);
+        flex-direction: column;
+        display: flex;
+        margin-top: -203px;
+        margin-left: -13px;
+    }
+
+    rectanother {
+        width: 126px;
+        height: 194px;
+        background-color: #E6E6E6;
+        border-width: 0px;
+        border-color: #000000;
+        border-radius: 11px;
+        border-style: solid;
+        box-shadow: 5px 5px 4px  0.2px rgba(0,0,0,1);
+    }
+
+    bookTitle {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        color: #121212;
+        margin-top: 6px;
+        margin-left: 27px;
+    }
+
+    contain {
+        display: inline-block;
+        margin-left: 4px;
+        height: 220px;
+        width: 140px;
+    }
+
+    bookText {
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        color: #f5f8fa;
+        font-size: 23px;
+        line-height: 2em;
+        text-shadow: 4px 8px 7px rgba(0, 0, 0, 0.25);
+    }
+
+    background {
+        
+        position: absolute;
+        border-radius: 15px;
+        background-color: #039dfc;
+        box-shadow: 5px 5px 4px 0.2px rgba(0, 0, 0, 0.2);
+        width: 126px;
+        height: 194px;
+        margin-left: 4px;
+        text-align: center;
+    }
+
+</style>
+{{#each results}}
+<contain>
+    <background>
+        <bookText>{{this.title}}</bookText>
+    </background>
+</contain>
+{{/each}}
+
+
+<!--
+<container>
+    <bookItem>
+        <rect2>
+            <rectanother></rectanother>
+            <bookTitle>&quot;Book Title&quot;</bookTitle>
+        </rect2>
+    </bookItem> 
+</container>
+-->
+
+

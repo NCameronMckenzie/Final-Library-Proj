@@ -1,0 +1,20 @@
+<div>
+    <h1>Hello Administrator {{username}}</h1>
+    <table>
+        <tr>
+            <th>Eagle ID</th>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Availability</th>
+        </tr>
+        {{#each checkedbooks}}
+        <tr>
+            <td>{{this.eid}}</td>
+            <td>{{this.title}}</td>
+            <td>{{this.ISBN}}</td>
+            <td>{{this.book_status}}</td>
+            
+        </tr>
+        {{/each}}
+    </table>
+</div>
