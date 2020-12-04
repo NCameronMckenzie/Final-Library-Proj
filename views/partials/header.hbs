@@ -1,7 +1,80 @@
+<style>
+    titletext {
+        font-size: 10vh;
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 500;
+        color:#ffffff;
+    }
+    .center{
+        text-align: center;
+        width: 50%;
+        margin-left: 25%;
+    }
+    .radiobtns{
+        margin:20px;
+        font-size: 40px;
+    }
+    .searchbox{
+        box-sizing: border-box;
+        background: #fafdff;
+        height: 40px;
+        width: 50%;
+        border-radius: 40px;
+        border-width: 2px;
+        border-color: #3b79db;
+        margin-bottom: 4em;
+        margin-left: 25%;
+        padding: 15px;
+    }
+
+    navtext {
+            color:#ffffff;
+            font-size: 2vh;
+            font-family: Roboto;
+            font-weight: 350;
+            margin: 1em;
+    }
+
+    a {
+        color:inherit;
+    }
+</style>
+
+<div style = "text-align: right;">
+    <navtext><a href="/">Home</a></navtext>
+    <navtext><a href="/user">Account</a></navtext>
+    <navtext><a href="/about">About</a></navtext>
+    <navtext><a href="/repo">Github</a></navtext>
+</div>
+
+<div style = "text-align: center;">
+    <titletext>
+        Library Search
+    </titletext>
+</div>
+
+<div>
+    <form action="/search/" method="get">
+        <input class = 'searchbox' type="text" placeholder="Search Books" name="q">
+
+        <navtext><a href="/books">All Books</a></navtext>
+        <div class = 'center'>
+            <input class = 'radiobtns' type="radio" id="ISBN" name="filter" value="ISBN">
+            <label for="ISBN">ISBN</label>
+            <input class = 'radiobtns' type="radio" id="title" name="filter" value="Title">
+            <label for="title">Title</label>
+            <input class = 'radiobtns' type="radio" id="author" name="filter" value="Author">
+            <label for="author">Author</label>
+            <input class = 'radiobtns' type="radio" id="genre" name="filter" value="Genre">
+            <label for="genre">Genre</label>
+        </div>
+    </form>
+</div>
+        
+<!--
 <nav>
     <ul>
-        <li style="display: inline-block;"><a href="/">Home</a></li>
-        <li style="display: inline-block;"><a href="/user">Account</a></li>
         <li style="display: inline-block;">
             <form action="/search/" method="get">
                 <input type="text" placeholder="Search Books" name="q">
@@ -10,3 +83,4 @@
         </li>
     </ul>
 </nav>
+-->

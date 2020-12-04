@@ -74,7 +74,7 @@
         
         position: absolute;
         border-radius: 15px;
-        background-color: #039dfc;
+        background-color: #83d8de;
         box-shadow: 5px 5px 4px 0.2px rgba(0, 0, 0, 0.2);
         width: 126px;
         height: 194px;
@@ -82,7 +82,23 @@
         text-align: center;
     }
 
+    searchval {
+        font-size: 4vh;
+        font-family: Roboto;
+        font-style: italic;
+        text-decoration: underline;
+        font-weight: 200;
+        color:#ffffff;
+    }
+
 </style>
+
+<div style = 'text-align: center; margin-bottom: 2vh;'>
+    <searchval>
+        Showing results for '{{val}}'
+    </searchval>
+</div>
+
 {{#each results}}
 <contain>
     <background>
@@ -90,17 +106,5 @@
     </background>
 </contain>
 {{/each}}
-
-
-<!--
-<container>
-    <bookItem>
-        <rect2>
-            <rectanother></rectanother>
-            <bookTitle>&quot;Book Title&quot;</bookTitle>
-        </rect2>
-    </bookItem> 
-</container>
--->
 
 

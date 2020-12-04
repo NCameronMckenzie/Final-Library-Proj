@@ -24,6 +24,7 @@ db.connect(function(err){
 });
 
 exports.searchinstance_submit = function(req, res, next) {
+
     //TODO: rewrite this to be more concise
     if (req.query.filter == 'ISBN'){
         var search_term = "%" + req.query.q + "%";
@@ -47,7 +48,7 @@ exports.searchinstance_submit = function(req, res, next) {
             res.redirect('/books/');
         }else{
             console.log(req.query.q + ' returned ' + data.length + " results");
-            res.render('bookobj', {layout: 'search', results: data});
+            res.render('bookobj', {layout: 'search', results: data, val: req.query.q});
         }
     });
 };

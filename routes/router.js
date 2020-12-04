@@ -4,7 +4,7 @@ const router = express.Router();
 const mysql = require('mysql');
 
 
-// SERVER
+// SERVER //
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -22,7 +22,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/books', (req, res) => {
-    res.render('bookobj', {layout: 'search'});
+    var findall = ('SELECT * from books');
+    connection.query(findall, function(err,data,fields){
+        if(err) throw err;
+
+        else{
+            res.render('bookobj', {layout: 'search', results: data, val: 'All Books'});
+        }
+    })
 });
 
 router.get('/search/', search_con.searchinstance_submit);
